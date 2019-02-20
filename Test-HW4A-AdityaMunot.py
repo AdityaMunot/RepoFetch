@@ -7,7 +7,7 @@ class testrepos(unittest.TestCase):
 
     def testrepos(self):
         repos = Repocheck('AdityaMunot')
-        expect = [['Anagram-Variety', 14], ['hello-world', 3], ['RepoFetch', 15], ['Repositoryprogram', 9], ['SSW-555-Group-Project', 13], ['SSW567', 1], ['Triangle567', 6]]
+        expect = [['Anagram-Variety', 14], ['hello-world', 3], ['RepoFetch', 16], ['Repositoryprogram', 9], ['SSW-555-Group-Project', 13], ['SSW567', 1], ['Triangle567', 6]]
         self.assertEqual(repos, expect)
 
 if __name__ == '__main__':
