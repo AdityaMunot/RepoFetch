@@ -2,24 +2,20 @@ import requests
 import json
 
 
-def Urldata(URL):
-    html = requests.get(URL)
-    loaded_json = json.loads(html.text)
-    return loaded_json
-
-
 def Repocheck(UserID):
     URL = 'https://api.github.com/users/'+UserID+'/repos'
-    Data = Urldata(URL)
+    html = requests.get(URL)
+    loaded_json = json.loads(html.text)
     repos = []
-    for x in Data:
+    for x in loaded_json:
         if "name" in x:
             repos.append([x["name"]])
     for i in repos:
         URL = "https://api.github.com/repos/"+UserID+"/"+i[0]+"/commits"
-        Data = Urldata(URL)
+        html = requests.get(URL)
+        loaded_json = json.loads(html.text)
         commit = 0
-        for x in Data:
+        for x in loaded_json:
             if "commit" in x:
                 commit = commit + 1
         i.append(commit)
