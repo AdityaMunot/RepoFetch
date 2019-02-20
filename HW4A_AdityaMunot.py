@@ -22,7 +22,7 @@ def Repocheck(UserID):
     return repos
 
 
-"""def Repoprint(repos):
+def Repoprint(repos):
     for i in repos:
         print(f"Repo: {i[0]} Number of commits: {i[1]}")
     print(repos)
@@ -31,8 +31,8 @@ def Repocheck(UserID):
 def main():
     UserID = input("Enter GitHub user ID: ")
     repos = Repocheck(UserID)
-    #Repoprint(repos)
+    Repoprint(repos)
 
 # Uncomment this below line to use this py file
-#if __name__ == "__main__":
-#    main()"""
+# if __name__ == "__main__":
+#    main()
